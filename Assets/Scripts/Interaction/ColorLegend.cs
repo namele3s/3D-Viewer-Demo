@@ -24,10 +24,15 @@ public class ColorLegend : MonoBehaviour
     [Tooltip("渐变纹理宽度")]
     [SerializeField] private int textureWidth = 256;
 
+    private UIAnimator animator;
+
     void Start()
     {
         if (legendRoot != null)
+        {
             legendRoot.SetActive(false);
+            animator = legendRoot.GetComponent<UIAnimator>();
+        }
 
         GenerateGradientTexture();
     }
@@ -44,12 +49,20 @@ public class ColorLegend : MonoBehaviour
 
     private void OnColorModeChanged(bool isColorMode, float min, float max, string title)
     {
-        if (legendRoot != null)
-            legendRoot.SetActive(isColorMode);
+        if (legendRoot == null) return;
 
         if (isColorMode)
         {
             UpdateLegend(min, max, title);
+            legendRoot.SetActive(true);
+        }
+        else
+        {
+            // 使用淡出动画隐藏
+            if (animator != null)
+                animator.FadeOut();
+            else
+                legendRoot.SetActive(false);
         }
     }
 

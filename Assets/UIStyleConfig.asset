@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6838a1ab3d100da408b5748b458d2309, type: 3}
+  m_Name: UIStyleConfig
+  m_EditorClassIdentifier: Assembly-CSharp::UIStyleConfig
+  panelBackground: {r: 0.98, g: 0.98, b: 0.98, a: 0.95}
+  panelBorder: {r: 0.85, g: 0.85, b: 0.85, a: 1}
+  textPrimary: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  textSecondary: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  accentColor: {r: 0.3, g: 0.6, b: 0.9, a: 1}
+  buttonBackground: {r: 0.95, g: 0.95, b: 0.95, a: 1}
+  buttonHover: {r: 0.9, g: 0.95, b: 1, a: 1}
+  buttonPressed: {r: 0.85, g: 0.9, b: 0.95, a: 1}
+  panelCornerRadius: 12
+  buttonCornerRadius: 8
+  enableShadow: 1
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.1}
+  shadowOffset: {x: 0, y: -2}
+  fadeInDuration: 0.3
+  fadeOutDuration: 0.25
+  titleFontSize: 20
+  bodyFontSize: 14
+  smallFontSize: 12
+  panelPadding: 16
+  elementSpacing: 8

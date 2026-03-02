@@ -16,11 +16,17 @@ public class ModelInfoPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI detailText;  // 详细信息文本
     [SerializeField] private Button closeButton;          // 关闭按钮
 
+    private UIAnimator animator;
+
     void Start()
     {
         // 初始隐藏面板
         if (panelRoot != null)
             panelRoot.SetActive(false);
+
+        // 获取动画组件
+        if (panelRoot != null)
+            animator = panelRoot.GetComponent<UIAnimator>();
 
         // 绑定关闭按钮
         if (closeButton != null)
@@ -158,6 +164,12 @@ public class ModelInfoPanel : MonoBehaviour
     private void HidePanel()
     {
         if (panelRoot != null)
-            panelRoot.SetActive(false);
+        {
+            // 如果有动画组件，使用淡出动画
+            if (animator != null)
+                animator.FadeOut();
+            else
+                panelRoot.SetActive(false);
+        }
     }
 }
